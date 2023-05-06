@@ -7,19 +7,19 @@ using UnityEngine.SceneManagement;
 public class SettingsMenu : MonoBehaviour
 {
     [Header("Components")]
-    [SerializeField] public AudioSource audio;
-    [SerializeField] public Slider slider;
-    [SerializeField] public Text text;
+    [SerializeField] private AudioSource audio;
+    [SerializeField] private Slider slider;
+    [SerializeField] private Text text;
 
     [Header("Keys")]
-    [SerializeField] public string saveVolumekey;
+    [SerializeField] private string saveVolumekey;
 
     [Header("Tags")]
-    [SerializeField] public string sliderTag;
-    [SerializeField] public string textVolumeTag;
+    [SerializeField] private string sliderTag;
+    [SerializeField] private string textVolumeTag;
 
     [Header("Parametrs")]
-    [SerializeField] public float volume;
+    [SerializeField] private float volume;
 
     private void Avake()
     {
@@ -48,7 +48,7 @@ public class SettingsMenu : MonoBehaviour
         GameObject sliderObj = GameObject.FindWithTag(this.sliderTag);
         if (sliderObj != null ) 
         { 
-            this.slider = sliderObj.GetComponent<Slider>();
+            this.slider = sliderObj.GetComponent<Slider> ();
             this.volume = slider.value;
         }
 
@@ -61,7 +61,7 @@ public class SettingsMenu : MonoBehaviour
 
         if (textObj != null )
         {
-            this.text = textObj.GetComponent<Text>();
+            this.text = textObj.GetComponent<Text> ();
             this.text.text = Mathf.Round( f: this.volume * 100 ) + "%";
         }
 

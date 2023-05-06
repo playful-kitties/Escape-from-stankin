@@ -7,8 +7,6 @@ TagManager:
   - obstacle
   - Coin
   - Bolt
-  - BG_MUSIC_VOLUME_SLIDER
-  - BG_MUSIC_VOLUME_TEXT
   layers:
   - Default
   - TransparentFX
