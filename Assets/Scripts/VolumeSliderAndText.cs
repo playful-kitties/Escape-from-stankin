@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class SettingsMenu : MonoBehaviour
+public class VolumeSliderAndText : MonoBehaviour
 {
     [Header("Components")]
     [SerializeField] private AudioSource audio;
@@ -23,7 +23,7 @@ public class SettingsMenu : MonoBehaviour
 
     private void Avake()
     {
-        if(PlayerPrefs.HasKey(this.saveVolumekey))
+        if (PlayerPrefs.HasKey(this.saveVolumekey))
         {
             this.volume = PlayerPrefs.GetFloat(this.saveVolumekey);
             this.audio.volume = this.volume;
